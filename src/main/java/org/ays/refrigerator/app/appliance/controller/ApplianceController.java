@@ -1,5 +1,7 @@
 package org.ays.refrigerator.app.appliance.controller;
 
+import org.ays.refrigerator.app.Response;
+import org.ays.refrigerator.app.Status;
 import org.ays.refrigerator.app.appliance.model.Appliance;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,38 +12,65 @@ public class ApplianceController {
 
     /* GET */
     @GetMapping(value = "/appliances")
-    public List<Appliance> getAppliances(){return null;}
+    public Response getAppliances(){
+        Response response = new Response();
+        response.setStatus(Status.SUCCESS);
+        return response;
+    }
     @GetMapping(value = "/appliance/{id}")
-    public Appliance getAppliance(@PathVariable String id) {return null;}
+    public Response getAppliance(@PathVariable String id) {
+        Response response = new Response();
+        response.setStatus(Status.SUCCESS);
+
+        return response;
+    }
 
     /* POST */
     @PostMapping(value = "/appliance")
-    public int postAppliance(@RequestBody Appliance appliance){
-        return 0;
+    public Response postAppliance(@RequestBody Appliance appliance){
+        Response response = new Response();
+        response.setStatus(Status.SUCCESS);
+
+        return response;
     }
     @PostMapping(value = "/appliances")
-    public int postAppliances(@RequestBody List<Appliance> appliances){
-        return 0;
+    public Response postAppliances(@RequestBody List<Appliance> appliances){
+        Response response = new Response();
+        response.setStatus(Status.SUCCESS);
+
+        return response;
     }
 
     /* PUT */
     @PutMapping(value = "/appliance")
-    public int putAppliance(@RequestBody Appliance appliance){
-        return 0;
+    public Response putAppliance(@RequestBody Appliance appliance){
+        Response response = new Response();
+        response.setStatus(Status.SUCCESS);
+
+        return response;
     }
     @PutMapping(value = "/appliances")
-    public int putAppliances(@RequestBody List<Appliance> appliances){
-        return 0;
+    public Response putAppliances(@RequestBody List<Appliance> appliances){
+        Response response = new Response();
+        response.setStatus(Status.SUCCESS);
+
+        return response;
     }
 
     /* DELETE */
     @DeleteMapping(value = "/appliance")
-    public int deleteAppliance(@RequestBody Appliance appliance){
-        return 0;
+    public Response deleteAppliance(@RequestBody Appliance appliance){
+        Response response = new Response();
+        response.setStatus(Status.SUCCESS);
+
+        return response;
     }
     @DeleteMapping(value = "/appliances")
-    public int deleteAppliances(@RequestBody List<Appliance> appliances){
-        return 0;
+    public Response deleteAppliances(@RequestBody List<Appliance> appliances){
+        Response response = new Response();
+        response.setStatus(Status.SUCCESS);
+
+        return response;
     }
 
 }
